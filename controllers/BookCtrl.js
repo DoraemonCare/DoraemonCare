@@ -1,13 +1,11 @@
-var Book = require('../models/Books');
-var Publisher = require('../models/Publisher');
+var db = require('../models');
 
 module.exports.getBooks = (req, res, next) => {
-  console.log('fsdfsdf');
-   return Book.findAndCountAll().then(function(books) {
-    console.log(books);
-    var Books = JSON.stringify(books.rows);
-    res.end(Books);
-   })
+  return db.Book.findAndCountAll()
+    .then(function (books) {
+      var Books = JSON.stringify(books.rows);
+      res.end(Books);
+    })
 };
 
 module.exports.insertBook = (book, callback) => {

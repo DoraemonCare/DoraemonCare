@@ -1,7 +1,0 @@
-{
-    "dbname": "app1",
-    "username": "huynguyen",
-    "password": null,
-    "host": "localhost",
-    "dialect": "mysql"
-}
