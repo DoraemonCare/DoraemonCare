@@ -1,6 +1,6 @@
 {
     "database": {
-        "dbname": "app1",
+        "dbname": "DoraemonDB",
         "username": "huynguyen",
         "password": null,
         "host": "localhost",

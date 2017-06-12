@@ -1,5 +1,9 @@
-var BookCtrl = require('./BookCtrl');
+var BenhCtrl = require('./BenhCtrl');
 
-module.exports.getBooks = (req, res, next) => {
-    BookCtrl.getBooks(req, res, next);
+module.exports.getBenh = (req, res, next) => {
+    BenhCtrl.getBenh(req, res, next);
+};
+
+module.exports.createBenh = (req, res, next) => {
+    BenhCtrl.createBenh(req, res, next);
 };

@@ -1,0 +1,117 @@
+{
+    "paths": {
+        "/benh": {
+            "get": {
+                "summary": "Product Types",
+                "description": "This is test Apis Book",
+                "operationId": "getBenh",
+                "responses": {
+                        "200": {
+                            "description": "template file",
+                            "schema": {
+                                "$ref": "#/definitions/Benh"
+                            }
+                        },
+                        "default": {
+                            "description": "unexpected error",
+                            "schema": {
+                                "$ref": "#/definitions/Error"
+                            }
+                        }
+                    },
+                "x-swagger-router-controller": "DefaultCtrl"
+            },
+            "post": {
+                "summary": "create new coffee",
+                "description": "input a new coffee to insert CoffeeDB",
+                "operationId": "createBenh",
+                 "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Coffee object that needs to be added to the CoffeeDB",
+                        "required": false,
+                        "schema": {
+                        "$ref": "#/definitions/Benh"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "template file",
+                        "schema": {
+                            "$ref": "#/definitions/Benh"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "x-swagger-router-controller": "DefaultCtrl"
+            },
+            "put": {
+                "summary": "create new coffee",
+                "description": "input a new coffee to insert CoffeeDB",
+                "operationId": "updateBenh",
+                 "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Coffee object that needs to be added to the CoffeeDB",
+                        "required": false,
+                        "schema": {
+                        "$ref": "#/definitions/Benh"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "template file",
+                        "schema": {
+                            "$ref": "#/definitions/Benh"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                },
+                "x-swagger-router-controller": "DefaultCtrl"
+            },
+            "delete": {
+                "summary": "Product Types",
+                "description": "This is test Apis Book",
+                "operationId": "deleteBenh",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "benhId",
+                        "description": "Coffee object that needs to be added to the CoffeeDB",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                        "200": {
+                            "description": "template file",
+                            "schema": {
+                                "$ref": "#/definitions/Benh"
+                            }
+                        },
+                        "default": {
+                            "description": "unexpected error",
+                            "schema": {
+                                "$ref": "#/definitions/Error"
+                            }
+                        }
+                    },
+                "x-swagger-router-controller": "DefaultCtrl"
+            }
+        }
+    }
+}
