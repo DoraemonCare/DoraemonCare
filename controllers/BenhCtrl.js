@@ -1,7 +1,14 @@
 var models = require("../models/models");
 
 module.exports.getBenh = (req, res, next) => {
-
+    models.Benh.find({}).exec((err, result) => {
+        if (err) {
+            res.statusCode = 400;
+            res.end(JSON.stringify({error: err}));
+        } else {
+            res.end(JSON.stringify(result));
+        }
+    });
 };
 
 module.exports.createBenh = (req, res, next) => {

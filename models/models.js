@@ -1,7 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/DoraemonDB');
+//mongoose.connect('mongodb://localhost/DoraemonDB');
+mongoose.connect('mongodb://doraemonadmin:tronghuy229@ds131782.mlab.com:31782/doraemoncaredb');
 
 var BenhSchema = new Schema({
   TenBenh: {
