@@ -4,9 +4,9 @@
     "title": "Doraemon Care APIs",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "salty-journey-61143.herokuapp.com",
   "schemes": [
-    "http"
+    "https"
   ],
   "basePath": "/api",
   "consumes": [
