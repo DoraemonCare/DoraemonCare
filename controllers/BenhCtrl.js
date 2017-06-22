@@ -2,11 +2,15 @@ var models = require("../models/models");
 
 module.exports.getBenh = (req, res, next) => {
     models.Benh.find({}).exec((err, result) => {
+        var response = {
+            benh: []
+        };
         if (err) {
             res.statusCode = 400;
             res.end(JSON.stringify({error: err}));
         } else {
-            res.end(JSON.stringify(result));
+            response.benh = result;
+            res.end(JSON.stringify(response));
         }
     });
 };

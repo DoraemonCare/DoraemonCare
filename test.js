@@ -13,3 +13,8 @@
 // var models = require('./models');
 // models.sequelize.sync();
 //models.blogSchema
+
+//   "host": "salty-journey-61143.herokuapp.com",
+//   "schemes": [
+//     "https"
+//   ],
