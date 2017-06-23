@@ -35,3 +35,20 @@ module.exports.createBenh = (req, res, next) => {
         }
     });
 };
+
+module.exports.getBenhByTrieuChung = (req, res, next) => {
+    var trieuchung = req.query.trieuchung;
+    var response = {
+        benh: []
+    };
+    models.Benh.find({ 'TrieuChung.TrieuChung1': { '$regex': trieuchung } })
+        .exec((err, result) => {
+            if (err) {
+                res.statusCode = 400;
+                res.end(JSON.stringify({error: err}));
+            } else {
+                response.benh = result;
+                res.end(JSON.stringify(response));
+            }
+        });
+};
