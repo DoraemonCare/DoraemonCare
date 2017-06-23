@@ -44,3 +44,11 @@ module.exports.getBenhByTrieuChung = (req, res, next) => {
         res.end(JSON.stringify({ benh: result }));
     });
 };
+
+module.exports.getBenhByTenBenh = (req, res, next) => {
+    var tenbenh = req.query.tenbenh;
+    models.Benh.find({ 'TenBenh': { '$regex': tenbenh } })
+        .exec((err, result) => {
+            res.end(JSON.stringify({ benh: result }));
+        });
+};
