@@ -15,3 +15,7 @@ module.exports.getBenhByTrieuChung = (req, res, next) => {
 module.exports.getBenhByTenBenh = (req, res, next) => {
     BenhCtrl.getBenhByTenBenh(req, res, next);
 };
+
+module.exports.getBenhById = (req, res, next) => {
+    BenhCtrl.getBenhById(req, res, next);
+};
