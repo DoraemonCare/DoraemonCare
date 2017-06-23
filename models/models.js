@@ -13,14 +13,12 @@ var BenhSchema = new Schema({
     }
   },
   TrieuChung: {
-    TrieuChung1: {
-      type: String
-    },
-    TrieuChung2: {
-      type: String
-    }
+    type: String
   },
-  BieuHien: {
+  MoTa: {
+    type: String
+  },
+  CachDieuTri: {
     type: String
   }
 });

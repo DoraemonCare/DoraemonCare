@@ -1,4 +1,6 @@
 var models = require("../models/models");
+var _ = require('underscore');
+var async = require('async');
 
 module.exports.getBenh = (req, res, next) => {
     models.Benh.find({}).exec((err, result) => {
@@ -19,11 +21,9 @@ module.exports.createBenh = (req, res, next) => {
     var Benh = req.body;
     var benh = new models.Benh({
         TenBenh: Benh.TenBenh,
-        TrieuChung: {
-            TrieuChung1: Benh.TrieuChung1,
-            TrieuChung2: Benh.TrieuChung2
-        },
-        BieuHien: Benh.BieuHien
+        TrieuChung: Benh.TrieuChung,
+        MoTa: Benh.MoTa,
+        CachDieuTri: Benh.CachDieuTri
     });
     
     benh.save(function (err) {
@@ -38,12 +38,9 @@ module.exports.createBenh = (req, res, next) => {
 
 module.exports.getBenhByTrieuChung = (req, res, next) => {
     var trieuchung = req.query.trieuchung;
-    var response = {
-        benh: []
-    };
-    models.Benh.find({ 'TrieuChung.TrieuChung1': { '$regex': trieuchung } })
-        .exec((err, result) => {
-            response.benh = result;
-            res.end(JSON.stringify(response));
-        });
+
+    models.Benh.find({ 'TrieuChung': { '$regex': trieuchung } })
+    .exec((err, result) => {
+        res.end(JSON.stringify({ benh: result }));
+    });
 };

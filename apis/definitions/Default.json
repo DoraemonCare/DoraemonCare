@@ -7,15 +7,15 @@
                 "type": "string",
                 "description": "Description of product."
                 },
-                "TrieuChung1": {
+                "TrieuChung": {
                 "type": "string",
                 "description": "Display name of product."
                 },
-                "TrieuChung2": {
+                "MoTa": {
                 "type": "string",
                 "description": "Capacity of product. For example, 4 people."
                 },
-                "BieuHien": {
+                "CachDieuTri": {
                 "type": "string",
                 "description": "Capacity of product. For example, 4 people."
                 }
