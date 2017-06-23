@@ -57,6 +57,6 @@ module.exports.getBenhById = (req, res, next) => {
     var tenbenh = req.query.tenbenh;
     models.Benh.findOne({ 'TenBenh': tenbenh })
         .exec((err, benh) => {
-             res.end(JSON.stringify(result));
+             res.end(JSON.stringify(benh));
         });
 };
