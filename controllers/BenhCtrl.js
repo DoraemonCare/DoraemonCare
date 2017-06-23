@@ -43,12 +43,7 @@ module.exports.getBenhByTrieuChung = (req, res, next) => {
     };
     models.Benh.find({ 'TrieuChung.TrieuChung1': { '$regex': trieuchung } })
         .exec((err, result) => {
-            if (err) {
-                res.statusCode = 400;
-                res.end(JSON.stringify({error: err}));
-            } else {
-                response.benh = result;
-                res.end(JSON.stringify(response));
-            }
+            response.benh = result;
+            res.end(JSON.stringify(response));
         });
 };
